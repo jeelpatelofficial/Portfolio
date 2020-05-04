@@ -36,15 +36,56 @@
 					<section id="first">
 						<header>
 							<h2>Simulation</h2>
-							<p><strong>Flock AI,</strong>In the natural world, organisms exhibit certain behaviors when traveling in groups. This phenomenon, also known as flocking, occurs at both microscopic scales (bacteria) and macroscopic scales (fish). Using computers, these patterns can be simulated by creating simple rules and combining them. This is known as emergent behavior, and can be used in games to simulate chaotic or life-like group movement.</p>
+							<p><strong>GOAP,</strong>Goal oriented action planning is an artificial intelligence system for agents that allows them to plan a sequence of actions to satisfy a particular goal. The particular sequence of actions depends not only on the goal but also on the current state of the world and the agent. This means that if the same goal is supplied for different agents or world states, you can get a completely different sequence of actions., which makes the AI more dynamic and realistic. Lets look at an example, as seen in the demo above.</p>
 							<br>
-							<p><strong>Here,</strong>i have implemented a flock AI algorithm along with genetic mutation which breeds fishes according to natural selection.It restarts simulation with newer fishes with different attributes selected by the genetic breeding function after regular time intervals.It takes different parameters e.g. energy, lifespan, food amount etc and sets its influence vector multipliers.</p>
+							<p><strong>Here,</strong>We have an agent, with the goal "Fetch Water" ,but in order to do that, it has to open a door which only opens with a key.</p>
+							<br>
+							<br>
+							<br>
+							<p><strong>GOAP Actions,</strong>are subclasses inherited from GOAP_Action Master class which stores information like action end result and prequisites.</p>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<p><strong>FSM,</strong>handles sequence of actions to be performed, planned, and executed.</p>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<p><strong>Here,</strong>Finite State Machine has only 3 states : Plan, Animate(perform Action) and "Goto" to reach to GOAP object in order to perform GOAP Actions.</p>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br><br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<h2>Results:</h2>
+							<p><strong>Here,</strong>The GOAP agent has goal state "HasWater" so on first cycle it fetches water closest to it, But on second cycle</p>
+							
 						</header>
 						<div class="content">
-							<p><strong>GENERATION: 1</strong></p>
-							<span class="image main"><img src="images/flock_gameplay.gif" alt="" /></span>
-							<p><strong>GENERATION: 1698</strong></p>
-							<span class="image main"><img src="images/flock_gameplayend.gif" alt="" /></span>
+							<p><strong>GOAP Agent: Set Goal String</strong></p>
+							<span class="image main"><img src="images/setstring.PNG" alt="" /></span>
+							<p><strong>Available Actions</strong></p>
+							<span class="image main"><img src="images/goapactions.PNG" alt="" /></span>
+							<span class="image main"><img src="images/goapSM.PNG" alt="" /></span>
+							<span class="image main"><img src="images/goapdemo.gif" alt="" /></span>
 						</div>
 					</section>
 
@@ -55,7 +96,7 @@
 						</header>
 						<div class="content">
 							<p><strong>Link: </strong>
-							<a href = "https://jeel-patel.itch.io/flock-ai" target = "_blank">Itch.io</a>
+							<a href = "https://jeel-patel.itch.io/goap" target = "_blank">Itch.io</a>
 							</p>
 							
 						</div>
