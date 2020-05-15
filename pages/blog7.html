@@ -42,7 +42,10 @@
 							<br>
 							<br>
 							<br>
-							<p><strong>GOAP Actions,</strong>are subclasses inherited from GOAP_Action Master class which stores information like action end result and prequisites.</p>
+							<br>
+
+							<h2>Level Design</h2>
+							<p><strong>I,</strong>made some custom models in Autodesk MAYA and inported over to unity and applied some postprocess color palet, and achieved some pretty interesting results.</p>
 							<br>
 							<br>
 							<br>
@@ -56,10 +59,50 @@
 							<br>
 							<br>
 							<br>
-							<p><strong>FSM,</strong>handles sequence of actions to be performed, planned, and executed.</p>
 							<br>
-							<p><strong>Here,</strong>Finite State Machine has only 3 states : Plan, Animate(perform Action) and "Goto" to reach to GOAP object in order to perform GOAP Actions.</p>
 							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<h2>Player Controller</h2>
+							<p><strong>PlayerController.cs,</strong>handles all the functions related to player.</p>
+							<br>
+							<br>
+							<br>
+							<br>
+							<p>The most of the PlayerController architecture is based on coroutine structure.The Character uses a restricted coroutines in order to follow certain in-game events.</p>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<p><strong>For Environment Detection,</strong>i have used RayTracing to set some variables in order to detect the type of obstacle its about ot hit. For example, if the top,center and bottom rays hit returns true,then there is big wall.Similarly,if only center and bottom rays returns true,it means that the obstacle is medium height.</p>
+							
+							<br>
+							<p>These bools determines the action (Jump,Vault or slide) and subsequent animations to play.</p>
+							<h2>Animation</h2>
+							<br>
+							<p>The model i have made in MAYA using different free other models and imported textures from photoshop and is using mixamo rig and mixamo animations</p>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<p>The GIF shown is animation used to "VAULT" over medium sized objects.</p>
+							<br>							<br>							<br>							<br>							<br>					<br>							<br>
+							<br>
+							<br>							<br>							<br>							<br>							<br>							<br>							<br>
+							<br>
+							<br>							<br>							<br>							<br>							<br>							<br>							<br>
+							<br>
+							<br>
+							<br>
+							<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 							<h2>Results:</h2>
 							<p><strong>Here,</strong>The GOAP agent has goal state "HasWater" so on first cycle it fetches water closest to it, But on second cycle</p>
 							
@@ -67,10 +110,20 @@
 						<div class="content">
 							<p><strong>Original Game: Art Style</strong></p>
 							<span class="image main"><img src="images/runnergameart.jpg" alt="" /></span>
-							<p><strong>Available Actions</strong></p>
-							<span class="image main"><img src="images/goapactions.PNG" alt="" /></span>
-							<span class="image main"><img src="images/goapSM.PNG" alt="" /></span>
-							<span class="image main"><img src="images/goapdemo.gif" alt="" /></span>
+							<p><strong>Level Made in Unity</strong></p>
+							<span class="image main"><img src="images/runnergameartclone.jpg" alt="" /></span>							
+							<span class="image main"><img src="images/runnergameartclone1.jpg" alt="" /></span>							
+							<span class="image main"><img src="images/runnergamecw.gif" alt="" /></span>
+							<span class="image main"><img src="images/runnergamerays.jpg" alt="" /></span>
+							<br>
+							<br>
+							<span class="image main"><img src="images/runnergamemaya.gif" alt="" /></span>
+							<p><strong>Mixamo Animation</strong></p>
+							<span class="image main"><img src="images/runnergameanims.gif" alt="" /></span>
+							<p><strong>In-Game Animation</strong></p>
+							<span class="image main"><img src="images/runnergameanims2.gif" alt="" /></span>
+							<p><strong>Animation Controller for Player uses different animations for variety of obstacle sizes.</strong></p>
+							<span class="image main"><img src="images/runnergameranimcontroller.jpg" alt="" /></span>
 						</div>
 					</section>
 
