@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Node Based AI Tool</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.svg" alt="" /></span>
+						<h1>Node Based AI Tool</h1>
+						<p>This tool is highly customizable tool used to create very sophiscated AI behaviours in games<br /></p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Introduction</a></li>
+							<li><a href="#first">The Percention System</a></li>
+							<li><a href="#second">Decorators</a></li>
+							<li><a href="#cta">Behaviour Tree</a></li>
+							<li><a href="#cta">Demo</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>What is Behaviour tree?</h2>
+										</header>
+										<p>A behavior tree is a mathematical model of plan execution used in computer science, robotics, control systems and video games. They describe switchings between a finite set of tasks in a modular fashion. Their strength comes from their ability to create very complex tasks composed of simple tasks, without worrying how the simple tasks are implemented. Behavior trees present some similarities to hierarchical state machines with the key difference that the main building block of a behavior is a task rather than a state. Its ease of human understanding make behavior trees less error prone and very popular in the game developer community. Behavior trees have been shown to generalize several other control architectures.[1][2] Mathematically, they are directed acyclic graphs.</p>
+										<ul class="actions">
+											<li><a href="https://www.gamasutra.com/blogs/ChrisSimpson/20140717/221339/Behavior_trees_for_AI_How_they_work.php" class="button">Learn More</a></li>
+										</ul>
+									</div>
+									<span class="image"><img src="images/btpic.png" alt="" /></span>
+								</div>
+							</section>
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>AI Perception System</h2>
+								</header>
+								<span class="image"><img src="images/perception.png" alt="" /></span>
+								<br>
+								<p>
+									The AI perception consists of some predescribed parameters which is used to sense and alter the Behaviour Tree flow.
+									These are player LineOfSight (in FOV), Range, Player Proximity, and damage proximity.
+								</p>
+								<span class="image"><img src="images/perceptiondebug.png" alt="" /></span>
+							</section>
+
+						<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<h2>Decorators</h2>
+									<span class="image"><img src="images/decorators.png" alt="" /></span>
+									<p>Decorators are directly controlled by AIPerception.The tasks will be fired in sequence for the active decorators.</p>
+								</header>
+								<span class="image"><img src="images/decorators2.png" alt="" /></span>
+								<br>
+								<br>
+						<!-- Get Started -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>Behaviour Tree</h2>
+									<p>Finally, with decorators and tasks, a behaviour tree is iterated in sequence which carries out certain tasks performed by AI. The tasks are nothing but a collection of lists which are refreshed in sequence by the Enemy script itself.</p>
+								</header>
+								<span class="image"><img src="images/tasks.png" alt="" /></span>
+								
+							</section>
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>Demo</h2>
+									<p></p>
+								</header>
+								
+								
+							</section>
+							<span class="image"><img src="images/taskdemo.gif" alt="" /></span>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
