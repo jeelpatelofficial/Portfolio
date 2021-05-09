@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Drone AI</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.svg" alt="" /></span>
+						<h1>Drone Flying AI</h1>
+						<p>This is a module for Nodebased AI Tool which i developed earlier.It uses a seperate movement logic to maneuver around environment.<br /></p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Introduction</a></li>
+							<li><a href="#first">The Setup</a></li>
+							<li><a href="#second">Movement</a></li>
+							<li><a href="#cta">Demo</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Flying AI</h2>
+										</header>
+										<p>A Flying AI has a very complex movement logic. Instead of using traditional A* for Path-finding on a plane (Navmesh), it uses directional vectors which are influenced by the objects around it to avoid any collisions.
+											<br>
+											Also, it doesnot use simple translation, instead it uses a rigidbody simulation to smoothout the overall movement and add actual flying force on the drone gameobject itself.
+										</p>
+										
+									</div>
+								</div>
+							</section>
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>The Setup</h2>
+								</header>
+								<span class="image"><img src="images/dronesensor.png" alt="" /></span>
+								<br>
+								<p>
+									The movement system uses a complex array of "Sensors" which feeds important information to perception component, which decides the influence vectors for the force applied on the drone.
+								</p>
+							</section>
+
+						<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<h2>Movement</h2>
+									<span class="image"><img src="images/movement1.gif" alt="" /></span>
+									<p>The movement uses a constant rigidbody force in the direction vector determined by taking in the factors for Sensors data. When fed in to perception, results in to obstacle avoidance while maintaining its flying nature.</p>
+								</header>
+								<span class="image"><img src="images/movement2.gif" alt="" /></span>
+								<br>
+								<br>
+						<!-- Get Started -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>Demo</h2>
+									<p>The whole module can be used to in any complex scenes with many obstacles. Interestingly, it is also able to find a "Escape window" and it will try to fly from that if its size is appropriate enough.</p>
+								</header>
+								<span class="image"><img src="images/movement3.gif" alt="" /></span>
+								
+							</section>
+							
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
