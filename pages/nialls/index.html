@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Events At Unity Farm (Steam)</title>
+		<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+<style>
+	h1 {text-align: center;}
+	p {text-align: center;}
+	div {text-align: center;}
+	</style>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="images/eauf-showcase.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+<div class="content">
+	<h1>Events At Unity Farm (VR)</h1>
+	<p>
+    he Events at Unity Farm is an open-world, dark fantasy VR adventure game (available on Steam and Viveport) where players use ancestral magic to fight undead bosses, 
+    craft potions, and solve puzzles to prevent a "Multipocalypse". Developed by Titan1Studios, the game blends Lovecraftian themes with a steampunk aesthetic.
+  </p>
+
+  <h2>Development contributions</h1>
+	<p>
+    Project architecture
+  </p>
+  <p>
+    Player abilities
+  </p>
+  <p>
+    Node based AI tools
+  </p>
+  <p>
+    Animation and Gameplay programming
+  </p>
+	
+  </div>
+    <div style="position: relative">
+      <p style="position: fixed; bottom: 0; width:100%; text-align: center">
+        <iframe src="https://store.steampowered.com/widget/2121610/" frameborder="0" width="646" height="190"></iframe>
+	</p>
+    </div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
