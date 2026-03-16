@@ -614,6 +614,19 @@
       transition: transform 0.6s ease;
     }
 
+    .project-media.contain-media {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.05), rgba(9,17,32,0.96));
+    }
+
+    .project-media.contain-media img {
+      object-fit: contain;
+      object-position: center;
+    }
+
     .project:hover .project-media img {
       transform: scale(1.06);
     }
@@ -952,7 +965,7 @@
 
       <div class="projects-grid">
 		<article class="panel project" data-tilt>
-          <div class="project-media">
+          <div class="project-media contain-media">
             <img src="images/eauf-header.jpg" alt="Events At Unity Farm" />
           </div>
           <div class="project-copy">
@@ -971,7 +984,7 @@
           </div>
         </article>
 		<article class="panel project" data-tilt>
-          <div class="project-media">
+          <div class="project-media contain-media">
             <img src="pages/jok/images/jok.jpg" alt="Jewel Of Kuru" />
           </div>
           <div class="project-copy">
@@ -985,45 +998,26 @@
               Experience the enchanted land of Kuru, filled with secrets and incredible multilevel bosses to fight on your way to find the Jewel Of Kuru which lies in the secrets on this majestic open world. 
             </p>
             <div class="project-links">
-              <a class="project-link" href="pages/eauf/index.html">View Project</a>
-            </div>
-          </div>
-        </article>
-		<article class="panel project" data-tilt>
-          <div class="project-media">
-            <img src="images/eauf-header.jpg" alt="Events At Unity Farm" />
-          </div>
-          <div class="project-copy">
-            <div class="project-tags">
-              <span class="tag">PCVR</span>
-              <span class="tag">Gameplay</span>
-              <span class="tag">Production</span>
-            </div>
-            <h3>Events At Unity Farm</h3>
-            <p>
-              A polished VR title showcasing hands-on gameplay implementation, iteration, and production-level problem solving.
-            </p>
-            <div class="project-links">
-              <a class="project-link" href="pages/eauf/index.html">View Project</a>
+              <a class="project-link" href="pages/jok/index.html">View Project</a>
             </div>
           </div>
         </article>
         <article class="panel project" data-tilt>
-          <div class="project-media">
-            <img src="images/eauf-header.jpg" alt="Events At Unity Farm" />
+          <div class="project-media contain-media">
+            <img src="images/fgame.jpg" alt="FGame - A Cinematic shooter" />
           </div>
           <div class="project-copy">
             <div class="project-tags">
-              <span class="tag">PCVR</span>
+              <span class="tag">PCV</span>
               <span class="tag">Gameplay</span>
-              <span class="tag">Production</span>
+              <span class="tag">Direction</span>
             </div>
-            <h3>Events At Unity Farm</h3>
+            <h3>Future Frontier - A Cinematic shooter</h3>
             <p>
-              A polished VR title showcasing hands-on gameplay implementation, iteration, and production-level problem solving.
+            An action packed third person game inspired from max payne's bullet time mechanics. The game takes place in neo future where you fight faction named S.R.F .
             </p>
             <div class="project-links">
-              <a class="project-link" href="pages/eauf/index.html">View Project</a>
+              <a class="project-link" href="pages/fgame/index.html">View Project</a>
             </div>
           </div>
         </article>
