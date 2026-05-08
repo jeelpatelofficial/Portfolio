@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jeel Patel — Game Systems Engineer</title>
   <meta name="description" content="Jeel Patel — gameplay programmer, AI systems designer, technical problem solver, and creator of interactive worlds." />
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #050816;
@@ -358,11 +359,10 @@
     }
 
     .hero-main {
-      padding: 34px;
+      padding: 40px 38px;
       min-height: 620px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
 
     .eyebrow {
@@ -392,9 +392,9 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(3rem, 6vw, 6.2rem);
-      line-height: 0.95;
-      letter-spacing: -0.05em;
+      font-size: clamp(2.4rem, 4.6vw, 5rem);
+      line-height: 1.0;
+      letter-spacing: -0.04em;
     }
 
     .gradient-name {
@@ -405,9 +405,9 @@
     }
 
     .hero-sub {
-      margin: 20px 0 0;
-      max-width: 720px;
-      font-size: 1.15rem;
+      margin: 18px 0 0;
+      max-width: 680px;
+      font-size: 1.08rem;
       line-height: 1.75;
       color: var(--muted);
     }
@@ -419,37 +419,155 @@
       gap: 14px;
     }
 
-    .hero-bottom {
-      margin-top: 32px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+    .hero-specialties {
+      margin-top: auto;
+      padding-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      border-top: 1px solid rgba(255,255,255,0.07);
     }
 
-    .stat {
-      padding: 18px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 1.7rem;
-      margin-bottom: 6px;
-    }
-
-    .stat span {
+    .hero-spec {
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
       color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.55;
+      transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .hero-spec:hover {
+      color: var(--accent);
+      border-color: rgba(114,228,255,0.28);
+      background: rgba(114,228,255,0.06);
+    }
+
+    .showcase-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #060f1c;
+      flex: 1;
+      min-height: 240px;
+    }
+
+    .showcase-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0.82;
+      transition: opacity 0.4s ease, transform 0.5s ease;
+    }
+
+    .showcase-card:hover .showcase-img {
+      opacity: 1;
+      transform: scale(1.03);
+    }
+
+    .showcase-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 18px 20px;
+      background: linear-gradient(to top, rgba(5,8,22,0.88) 0%, transparent 100%);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .showcase-label {
+      color: var(--muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+    }
+
+    .tech-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tech-chip {
+      padding: 6px 13px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      background: rgba(114,228,255,0.07);
+      border: 1px solid rgba(114,228,255,0.18);
+      color: var(--accent);
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .tech-chip:hover {
+      background: rgba(114,228,255,0.13);
+      border-color: rgba(114,228,255,0.35);
+    }
+
+    /* ── Chalk board writer ── */
+    .chalk-circle-wrap {
+      position: absolute;
+      /* vertically centred on the board screen in the GIF */
+      top: 47%;
+      transform: translateY(-50%);
+      /* horizontally clipped to the board edges */
+      left: 22%;
+      right: 20%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.6rem;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .chalk-board-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Kalam', cursive;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.06em;
+      text-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.75),
+        0 0 14px rgba(255, 255, 255, 0.18);
+      white-space: nowrap;
+    }
+
+    /* clip-path sweep target — must be block-level */
+    #chalk-text {
+      display: inline-block;
+    }
+
+    .chalk-cursor {
+      display: inline-block;
+      margin-left: 2px;
+      color: rgba(255, 255, 255, 0.8);
+      animation: cursor-blink 0.65s step-end infinite;
+    }
+
+    @keyframes cursor-blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
     }
 
     .hero-side {
       padding: 22px;
-      display: grid;
+      display: flex;
+      flex-direction: column;
       gap: 16px;
-      align-content: start;
       min-height: 620px;
     }
 
@@ -803,6 +921,15 @@
       .hero-side {
         min-height: auto;
       }
+
+      .hero-specialties {
+        margin-top: 28px;
+        padding-top: 22px;
+      }
+
+      .showcase-card {
+        min-height: 260px;
+      }
     }
 
     @media (max-width: 760px) {
@@ -908,45 +1035,47 @@
             </div>
           </div>
 
-          <div class="hero-bottom">
-            <div class="stat">
-              <strong>AI</strong>
-              <span>Behavior systems, decision-making, pathfinding, systemic gameplay.</span>
-            </div>
-            <div class="stat">
-              <strong>Tools</strong>
-              <span>Workflow-focused utilities that help teams build faster and iterate better.</span>
-            </div>
-            <div class="stat">
-              <strong>Gameplay</strong>
-              <span>Mechanics, feel, simulation, and player interaction with strong technical grounding.</span>
-            </div>
+          <div class="hero-specialties">
+            <span class="hero-spec">AI Systems</span>
+            <span class="hero-spec">Gameplay Engineering</span>
+            <span class="hero-spec">Dev Tools</span>
+            <span class="hero-spec">VR / XR</span>
+            <span class="hero-spec">Unity</span>
+            <span class="hero-spec">Unreal 5</span>
+            <span class="hero-spec">C++ / OpenGL</span>
+            <span class="hero-spec">Maya · ZBrush</span>
           </div>
         </div>
 
         <div class="panel hero-side">
-          <div class="card art-panel" data-tilt>
-            <div class="art-grid"></div>
-            <div class="art-orb"></div>
-            <div class="art-ring"></div>
-            <div class="art-cube"></div>
+          <div class="showcase-card">
+            <img src="images/headergif.gif" alt="AI & gameplay systems demo" class="showcase-img" />
+
+            <!-- Chalk board: write → erase → next tool -->
+            <div class="chalk-circle-wrap">
+              <div class="chalk-board-text">
+                <span id="chalk-text"></span><span class="chalk-cursor" id="chalk-cursor">|</span>
+              </div>
+            </div>
           </div>
 
           <div class="card feature-card" data-tilt>
             <h3>What I bring</h3>
             <p>
-              A rare blend of gameplay programming, AI logic, rapid prototyping, and technical creativity — ideal for ambitious interactive projects.
+              Gameplay programming, AI logic, rapid prototyping, and technical creativity — for ambitious interactive projects that need both polish and depth.
             </p>
-          </div>
-
-          <div class="mini-grid">
-            <div class="card mini-card" data-tilt>
-              <h3>Unity</h3>
-              <p>Custom tools, gameplay systems, editor workflows, AI features, and runtime problem-solving.</p>
-            </div>
-            <div class="card mini-card" data-tilt>
-              <h3>C++ / Graphics</h3>
-              <p>OpenGL experiments, systems thinking, and low-level curiosity that strengthens engine-side reasoning.</p>
+            <div class="tech-row">
+              <span class="tech-chip">Unity</span>
+              <span class="tech-chip">Unreal 5</span>
+              <span class="tech-chip">C++</span>
+              <span class="tech-chip">Blueprints</span>
+              <span class="tech-chip">OpenGL</span>
+              <span class="tech-chip">Autodesk Maya</span>
+              <span class="tech-chip">ZBrush</span>
+              <span class="tech-chip">Photoshop</span>
+              <span class="tech-chip">Behavior Trees</span>
+              <span class="tech-chip">Editor Tools</span>
+              <span class="tech-chip">VR / XR</span>
             </div>
           </div>
         </div>
@@ -1542,6 +1671,92 @@
 
     resizeCanvas();
     drawSwarm(performance.now());
+
+    // ── Chalk board hand-writing animation ──
+    (function () {
+      const tools = [
+        'Unity', 'Unreal 5', 'C++', 'Autodesk Maya',
+        'Photoshop', 'ZBrush', 'Blueprints', 'OpenGL'
+      ];
+      const textEl   = document.getElementById('chalk-text');
+      const cursorEl = document.getElementById('chalk-cursor');
+      if (!textEl || !cursorEl) return;
+
+      const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+      // Ease-in-out: slow start, fast middle, slow finish — natural hand motion
+      function ease(t) {
+        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+      }
+
+      // Reveal text left → right via clip-path (chalk stroke sweep)
+      function write(word) {
+        textEl.textContent = word;
+        textEl.style.clipPath = 'inset(0 100% 0 0)';   // fully hidden
+        textEl.style.opacity  = '1';
+        textEl.style.filter   = 'none';
+        // Scale duration with word length so longer words feel the same speed
+        const duration = Math.max(700, word.length * 85);
+        const t0 = performance.now();
+        return new Promise(resolve => {
+          function frame(now) {
+            const t = Math.min((now - t0) / duration, 1);
+            const p = ease(t);
+            // Right inset shrinks from 100 → 0 as p goes 0 → 1
+            textEl.style.clipPath = `inset(0 ${((1 - p) * 100).toFixed(2)}% 0 0)`;
+            if (t < 1) requestAnimationFrame(frame);
+            else resolve();
+          }
+          requestAnimationFrame(frame);
+        });
+      }
+
+      // Erase left → right via clip-path (eraser sweeping across)
+      function erase(word) {
+        const duration = Math.max(500, word.length * 55);
+        textEl.style.opacity = '0.58';
+        textEl.style.filter  = 'blur(0.45px)';
+        const t0 = performance.now();
+        return new Promise(resolve => {
+          function frame(now) {
+            const t = Math.min((now - t0) / duration, 1);
+            const p = ease(t);
+            // Left inset grows from 0 → 100 as p goes 0 → 1 (erases left-to-right)
+            textEl.style.clipPath = `inset(0 0 0 ${(p * 100).toFixed(2)}%)`;
+            if (t < 1) requestAnimationFrame(frame);
+            else {
+              textEl.style.opacity = '1';
+              textEl.style.filter  = 'none';
+              resolve();
+            }
+          }
+          requestAnimationFrame(frame);
+        });
+      }
+
+      let idx = 0;
+      async function run() {
+        while (true) {
+          const word = tools[idx % tools.length];
+          idx++;
+
+          // Hide cursor while the hand is writing
+          cursorEl.style.display = 'none';
+          await write(word);
+
+          // Cursor blinks while text is held on screen
+          cursorEl.style.display = 'inline-block';
+          await sleep(1700);
+
+          // Hide cursor while erasing
+          cursorEl.style.display = 'none';
+          await erase(word);
+
+          await sleep(320);
+        }
+      }
+      run();
+    }());
 
     document.querySelectorAll('[data-tilt]').forEach((el) => {
       if (prefersReducedMotion) return;
